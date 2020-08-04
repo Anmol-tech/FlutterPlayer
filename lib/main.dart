@@ -1,5 +1,7 @@
+import 'package:Player/Pages/AudioPlayer.dart';
 import 'package:Player/Pages/Home.dart';
-import 'package:Player/Pages/Player.dart';
+import 'package:Player/Pages/OfflinePlayer.dart';
+import 'package:Player/Pages/OnlinePlayer.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,7 +14,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       routes: {
-        '/VideoPlayer': (BuildContext context) => DefaultPlayer(),
+        '/onlineVideoPlayer': (BuildContext context) => OnlinePlayer(),
+        '/audioPlayer': (BuildContext context) => AudioPlayer(),
+        '/offlineVideoPlayer': (BuildContext context) => OfflinePlayer(),
+        // '/audioPlayer': (BuildContext context) => ExampleApp(),
         '/home': (BuildContext context) => HomePage(),
       },
       debugShowCheckedModeBanner: false,
@@ -30,7 +35,7 @@ class MyApp extends StatelessWidget {
           ),
           bodyText1: TextStyle(fontSize: 22),
           headline1: TextStyle(
-            fontSize: 72,
+            fontSize: 60,
             color: Colors.white,
             fontWeight: FontWeight.w900,
           ),

@@ -1,10 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 String videoUrl;
 TextEditingController url = TextEditingController();
 
 class Data {
   String link = url.text;
+}
+
+showtoast() {
+  return Fluttertoast.showToast(
+      msg: "Url Cannot be Empty",
+      toastLength: Toast.LENGTH_SHORT,
+      gravity: ToastGravity.TOP,
+      timeInSecForIosWeb: 1,
+      backgroundColor: Colors.deepOrange[400],
+      textColor: Colors.white,
+      fontSize: 16.0);
 }
 
 class HomePage extends StatefulWidget {
@@ -45,6 +57,27 @@ class HomePageState extends State<HomePage> {
                   ),
                 ),
                 Padding(
+                  padding: EdgeInsets.only(top: 10.0),
+                ),
+                RaisedButton(
+                  onPressed: () {
+                    if (url.text.isNotEmpty) {
+                      Navigator.pushReplacementNamed(
+                          context, '/onlineVideoPlayer');
+                    } else {
+                      showtoast();
+                    }
+                  },
+                  color: Theme.of(context).accentColor,
+                  elevation: 20,
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10)),
+                  child: Text(
+                    'Play Media ',
+                    style: Theme.of(context).textTheme.bodyText1,
+                  ),
+                ),
+                Padding(
                   padding: EdgeInsets.only(top: 20.0),
                 ),
                 Text(
@@ -56,7 +89,8 @@ class HomePageState extends State<HomePage> {
                 ),
 
                 RaisedButton(
-                  onPressed: () => print('audio file'),
+                  onPressed: () =>
+                      Navigator.pushReplacementNamed(context, '/audioPlayer'),
                   color: Theme.of(context).accentColor,
                   elevation: 20,
                   shape: RoundedRectangleBorder(
@@ -70,26 +104,14 @@ class HomePageState extends State<HomePage> {
                   padding: EdgeInsets.only(top: 20.0),
                 ),
                 RaisedButton(
-                  onPressed: () => print('video'),
-                  // Navigator.pushReplacementNamed(context, '/VideoPlayer'),
+                  onPressed: () => Navigator.pushReplacementNamed(
+                      context, '/offlineVideoPlayer'),
                   color: Theme.of(context).accentColor,
                   elevation: 20,
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10)),
                   child: Text(
                     'Choose Video File',
-                    style: Theme.of(context).textTheme.bodyText1,
-                  ),
-                ),
-                RaisedButton(
-                  onPressed: () =>
-                      Navigator.pushReplacementNamed(context, '/VideoPlayer'),
-                  color: Theme.of(context).accentColor,
-                  elevation: 20,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10)),
-                  child: Text(
-                    'Play Media ',
                     style: Theme.of(context).textTheme.bodyText1,
                   ),
                 ),
