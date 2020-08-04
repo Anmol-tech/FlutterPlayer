@@ -49,8 +49,7 @@ class _OnlinePlayerState extends State<OnlinePlayer> {
     setUrl();
     try {
       flickManager = FlickManager(
-          videoPlayerController:
-              VideoPlayerController.asset('assets/video/movie.mp4'));
+          videoPlayerController: VideoPlayerController.asset(null));
     } catch (e) {
       print(e);
     }
