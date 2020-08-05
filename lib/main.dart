@@ -17,7 +17,6 @@ class MyApp extends StatelessWidget {
         '/onlineVideoPlayer': (BuildContext context) => OnlinePlayer(),
         '/audioPlayer': (BuildContext context) => AudioPlayer(),
         '/offlineVideoPlayer': (BuildContext context) => OfflinePlayer(),
-        // '/audioPlayer': (BuildContext context) => ExampleApp(),
         '/home': (BuildContext context) => HomePage(),
       },
       debugShowCheckedModeBanner: false,
