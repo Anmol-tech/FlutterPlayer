@@ -1,16 +1,36 @@
-# Player
+# Media Player Flutter
 
-A new Flutter project.
+##### This is a Media Player Created with Flutter.
+  - It uses API to handle Video from Sites.
+  - API is written in Python using Flask.
 
-## Getting Started
+# New Features!
 
-This project is a starting point for a Flutter application.
+  - Can Play Video from upto 255+ Media Platform.
+ 
+# Dependencies:
+* flick_video_player: ^0.1.1
+* http: ^0.12.2
+* flutter_widgets: ^0.1.12
+* file_picker: ^1.13.0+1
+* audioplayers: ^0.15.1
+* fluttertoast: ^7.0.2
 
-A few resources to get you started if this is your first Flutter project:
+# Tech
+ * [Flutter](https://flutter.dev/)
+ * [Python](https://www.python.org/)
+ * [Flask](https://pypi.org/project/Flask/)
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+# Images
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Home Page](https://miro.medium.com/max/933/1*cC7c33aBmFmNnLDIiryImQ.png ) 
+![Video From Link](https://miro.medium.com/max/498/1*2qMg5PNA7Ma2BH-UyqmILw.gif)
+![Video From Local](https://miro.medium.com/max/600/1*S4s5eQsLaUMhvsZPx0s9Lw.gif)
+# License
+----
+
+MIT
+
+
+
+
